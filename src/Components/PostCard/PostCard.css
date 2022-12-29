@@ -1,7 +1,8 @@
-.Posts{
+.Post
+{
     display: flex;
     flex-direction: column;
+    padding: 1rem;
+    border-radius: 1rem;
     gap: 1rem;
-    margin:0 auto;
-    
 }

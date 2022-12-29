@@ -6,9 +6,10 @@ import Heart from '../../img/like.png'
 import NotLike from '../../img/notlike.png'
 
 const Post = ({post}) => {
+    console.log(post)
     return (
         <div className="Post">
-        <img src={post.img} alt="" />
+        <img src={post.image} alt="" />
 
 
         <div className="postReact">
