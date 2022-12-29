@@ -12,8 +12,8 @@ const PostCard = ({postdata}) => {
 			<span className="text-xs dark:text-gray-400">4 hours ago</span>
 		</div>
 	</div>
-	<div>
-		<img src={postdata.image} alt="" className="object-cover w-full mb-4 h-60 sm:h-96 dark:bg-gray-500" />
+	<div className=''>
+		<img src={postdata.image} alt="" className="object-cover w-full mb-4 h-32 sm:h-96 bg-gray-500" />
 		<h2 className="mb-1 text-xl font-semibold">{postdata.description}</h2>
 		<p className="text-sm dark:text-gray-400">Eu qualisque aliquando mel, id lorem detraxit nec, ad elit minimum pri. Illum ipsum detracto ne cum. Mundi nemore te ius, vim ad illud atqui apeirian...</p>
 	</div>
