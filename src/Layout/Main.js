@@ -1,13 +1,14 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from '../Components/Navbar'
-import Home from '../Pages/Home/Home'
+import Footer from '../Pages/Footer/Footer'
 
 const Main = () => {
   return (
-    <div className='h-screen'>
+    <div className='container mx-auto flex flex-col gap-5'>
       <Navbar></Navbar>
       <Outlet></Outlet>
+      <Footer></Footer>
     </div>
   )
 }

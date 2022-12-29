@@ -3,6 +3,9 @@ import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { AuthContext } from '../contexts/AuthProvider'
 import PrimaryButton from '../Components/Button/PrimaryButton'
+import homeLogo from '../img/home.png'
+import { UilScenery } from "@iconscout/react-unicons";
+import { UilEnvelopeAdd } from '@iconscout/react-unicons'
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext)
@@ -15,7 +18,7 @@ const Navbar = () => {
           to='/'
           className='flex title-font font-medium items-center text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-lime-500 mb-4 md:mb-0'
         >
-          <span className='ml-3 text-2xl font-bold '>Aircnc</span>
+          <span className='ml-3 text-2xl font-bold '>MediaChat</span>
         </Link>
         <nav className='md:ml-auto flex flex-wrap items-center text-base justify-center'>
           {user?.email ? (
@@ -38,11 +41,34 @@ const Navbar = () => {
                 {isDropdownOpen && (
                   <div className='absolute right-0 z-20 w-48 py-2 mt-2 bg-white rounded-md shadow-xl '>
                     <Link
-                      to='/Dashboard'
-                      className='flex items-center px-3 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform  hover:bg-gray-100 '
+                      to='/'
+                      className='flex items-center px-4 gap-2 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform  hover:bg-gray-100 '
+                    >
+                      <img className='h-6 w-6 ' src={homeLogo} alt="" srcset="" />
+                      <span className='mx-1'>Home</span>
+                    </Link>
+
+                    <hr className='border-gray-200' />
+                    <Link
+                      to='/media'
+                      className='flex items-center px-4 gap-2 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform  hover:bg-gray-100 '
+                    >
+                     <span className='bg-orange-500 w-6 h-6 text-white'><UilScenery/></span> 
+                      <span className='mx-1'>Media</span>
+                    </Link>
+                    <Link
+                      to='/message'
+                      className='flex items-center px-4 gap-2 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform  hover:bg-gray-100 '
+                    >
+                    <span className='h-6 w-6 bg-orange-500 text-white '>< UilEnvelopeAdd/> </span>
+                      <span className='mx-1'>Message</span>
+                    </Link>
+                    <Link
+                      to='/about'
+                      className='flex items-center px-3 py-3 text-sm  capitalize transition-colors duration-200 transform  hover:bg-gray-100 '
                     >
                       <svg
-                        className='w-5 h-5 mx-1'
+                        className='w-6 h-6 mx-1 text-orange-400'
                         viewBox='0 0 24 24'
                         fill='none'
                         xmlns='http://www.w3.org/2000/svg'
@@ -57,7 +83,7 @@ const Navbar = () => {
                         ></path>
                       </svg>
 
-                      <span className='mx-1'>Dashboard</span>
+                      <span className='mx-1 '>About</span>
                     </Link>
 
                     <hr className='border-gray-200' />
@@ -66,7 +92,7 @@ const Navbar = () => {
                       logout()
                     }} className='flex items-center cursor-pointer p-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform  hover:bg-gray-100 '>
                       <svg
-                        className='w-5 h-5 mx-1'
+                        className='w-5 h-5 mx-1 bg-orange-400 text-white'
                         viewBox='0 0 24 24'
                         fill='none'
                         xmlns='http://www.w3.org/2000/svg'
@@ -86,7 +112,9 @@ const Navbar = () => {
           ) : (
             <>
               <Link to='/login' className='mr-5 hover:text-green-600'>
-                Login
+              <PrimaryButton classes='rounded-full px-2 py-1'>
+                  Login
+              </PrimaryButton>
               </Link>
               <Link to='/signup' className='mr-5'>
                 <PrimaryButton classes='rounded-full px-2 py-1'>
