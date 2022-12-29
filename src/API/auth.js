@@ -5,7 +5,7 @@ export const setAuthToken = (user) =>{
 
     // save user in db and get token
 
-    fetch(`http://localhost:5000/user/${user?.email}`,{
+    fetch(`https://social-media-server-gamma.vercel.app/user/${user?.email}`,{
         method: 'PUT',
         headers: {
             'Content-type': 'application/json',
