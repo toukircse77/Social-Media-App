@@ -6,6 +6,7 @@ import Login from "../Pages/Login/Login";
 import Signup from "../Pages/Login/Signup";
 import Media from "../Pages/Media/Media";
 import ErrorPage from "../Pages/Shared/ErrorPage";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
            {
@@ -23,11 +24,11 @@ export const router = createBrowserRouter([
                 },
                 {
                     path:'/about',
-                    element:<About></About>
+                    element:<PrivateRoute><About></About></PrivateRoute> 
                 },
                 {
                     path:'/media',
-                    element:<Media></Media>
+                    element: <PrivateRoute> <Media></Media></PrivateRoute>
                 },
                 {
                     path:'/login',
