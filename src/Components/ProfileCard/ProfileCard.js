@@ -14,20 +14,20 @@ const ProfileCard = () => {
         </div>
   
         <div className="ProfileName">
-          <span>Zendaya MJ</span>
-          <span>Senior UI/UX Designer</span>
+          <span>Aliana frence</span>
+          <span>Junior Mern developer</span>
         </div>
   
         <div className="followStatus">
           <hr />
           <div>
             <div className="follow">
-              <span>6,890</span>
+              <span>15</span>
               <span>Followings</span>
             </div>
             <div className="vl"></div>
             <div className="follow">
-              <span>1</span>
+              <span>6,890</span>
               <span>Followers</span>
             </div>
   

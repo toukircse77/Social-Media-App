@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./InfoCard.css";
 import { UilPen } from "@iconscout/react-unicons";
 import ProfileModal from "../ProfileModal/ProfileModal";
+import { AuthContext } from "../../contexts/AuthProvider";
 
 const InfoCard = () => {
   const [modalOpened, setModalOpened] = useState(false);
+  const {user} = useContext(AuthContext);
+  console.log(user)
   return (
     <div className="InfoCard">
       <div className="infoHead">
@@ -25,23 +28,29 @@ const InfoCard = () => {
 
       <div className="info">
         <span>
-          <b>Status </b>
+          <b>Name :</b>
         </span>
-        <span>in Relationship</span>
+        <span>Aliena france</span>
       </div>
 
       <div className="info">
         <span>
-          <b>Lives in </b>
+          <b>Email :</b>
         </span>
-        <span>Multan</span>
+        <span>aliena@gmail.com</span>
       </div>
 
       <div className="info">
         <span>
-          <b>Works at </b>
+          <b>University :</b>
         </span>
-        <span>Zainkeepscode inst</span>
+        <span>Military Institute of Science and Technology</span>
+      </div>
+      <div className="info">
+        <span>
+          <b>Address :</b>
+        </span>
+        <span>newpark city, California</span>
       </div>
 
       <button className="button logout-button">Logout</button>

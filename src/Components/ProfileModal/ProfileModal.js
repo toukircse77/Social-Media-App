@@ -3,6 +3,8 @@ import { Modal, useMantineTheme } from "@mantine/core";
 function ProfileModal({ modalOpened, setModalOpened }) {
   const theme = useMantineTheme();
 
+
+
   return (
     <Modal
       overlayColor={
@@ -23,16 +25,16 @@ function ProfileModal({ modalOpened, setModalOpened }) {
           <div><input
             type="text"
             className="border text-center rounded-lg border-green-400"
-            name="FirstName"
-            placeholder="First Name"
+            name="name"
+            placeholder="your name"
           /></div>
 
           <div>
           <input
             type="text"
             className="border text-center rounded-lg border-green-400"
-            name="LastName"
-            placeholder="Last Name"
+            name="email"
+            placeholder="email address"
           />
           </div>
         </div>
@@ -42,15 +44,15 @@ function ProfileModal({ modalOpened, setModalOpened }) {
             <input
             type="text"
             className="border text-center rounded-lg border-green-400"
-            name="livesIN"
-            placeholder="LIves in"
+            name="address"
+            placeholder="Adress"
           />
             </div>
             <div>
             <input
             type="text"
             className="border text-center rounded-lg border-green-400"
-            name="Country"
+            name="country"
             placeholder="Country"
           />
             </div>
@@ -59,8 +61,9 @@ function ProfileModal({ modalOpened, setModalOpened }) {
         <div className="flex justify-center items-center">
           <input
             type="text"
+            name="university"
             className="border  text-center rounded-lg border-green-400"
-            placeholder="RelationShip Status"
+            placeholder="university"
           />
         </div>
         <button className="button flex mx-auto p-2 w-1/2">Update</button>
